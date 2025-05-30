@@ -1,0 +1,57 @@
+Checks: "-*,\
+    bugprone-*,\
+    -bugprone-easily-swappable-parameters,\
+    -bugprone-reserved-identifier,\
+    cppcoreguidelines-*,\
+    -cppcoreguidelines-pro-bounds-constant-array-index,\
+    -cppcoreguidelines-avoid-magic-numbers,\
+    -cppcoreguidelines-macro-usage,\
+    -cppcoreguidelines-pro-type-reinterpret-cast,\
+    -cppcoreguidelines-pro-type-cstyle-cast,\
+    -cppcoreguidelines-pro-type-union-access,\
+    -cppcoreguidelines-pro-bounds-pointer-arithmetic,\
+    -cppcoreguidelines-pro-type-vararg,\
+    -cppcoreguidelines-avoid-c-arrays,\
+    -cppcoreguidelines-pro-bounds-array-to-pointer-decay,\
+    -cppcoreguidelines-special-member-functions,\
+    -cppcoreguidelines-non-private-member-variables-in-classes,\
+    -cppcoreguidelines-explicit-virtual-functions,\
+    -cppcoreguidelines-owning-memory,\
+    google-build-using-namespace,\
+    google-explicit-constructor,\
+    google-global-names-in-headers,\
+    google-runtime-operator,\
+    misc-*,\
+    -misc-non-private-member-variables-in-classes,\
+    -misc-no-recursion,\
+    modernize-*,\
+    -modernize-avoid-c-arrays,\
+    -modernize-use-trailing-return-type,\
+    -modernize-use-override,\
+    performance-*,\
+    readability-*,\
+    -readability-magic-numbers,\
+    -readability-identifier-length,\
+    -readability-named-parameter,\
+    -readability-braces-around-statements,\
+    -readability-implicit-bool-conversion,\
+    -readability-function-cognitive-complexity,\
+    clang-analyzer-*"
+CheckOptions:
+    - key: bugprone-argument-comment.StrictMode
+      value: 1
+    - key: 'bugprone-argument-comment.IgnoreSingleArgument'
+      value: 'false'
+    - key: 'bugprone-argument-comment.CommentBoolLiterals'
+      value: 'true'
+    - key: 'bugprone-argument-comment.CommentIntegerLiterals'
+      value: 'true'
+    - key: 'bugprone-argument-comment.CommentFloatLiterals'
+      value: 'true'
+    - key: 'bugprone-argument-comment.CommentStringLiterals'
+      value: 'true'
+    - key: 'bugprone-argument-comment.CommentCharacterLiterals'
+      value: 'true'
+    - key: 'bugprone-argument-comment.CommentNullPtrs'
+      value: 'true'
+FormatStyle: 'file'
