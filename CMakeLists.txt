@@ -39,11 +39,25 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(assimp)
 
+# FreeType
+FetchContent_Declare(
+  freetype
+  GIT_REPOSITORY https://gitlab.freedesktop.org/freetype/freetype.git
+  GIT_TAG VER-2-12-1
+)
+FetchContent_MakeAvailable(freetype)
+
 # Add executable
 add_executable(Rasterizer
   src/main.cpp
   src/camera.h
 )
 
+# Link FreeGLUT
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+target_include_directories(Rasterizer PRIVATE ${OPENGL_INCLUDE_DIR} ${GLUT_INCLUDE_DIR})
+target_link_libraries(Rasterizer ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
+
 target_include_directories(Rasterizer PRIVATE ${glad_SOURCE_DIR}/include)
-target_link_libraries(Rasterizer glad glfw glm assimp)
+target_link_libraries(Rasterizer glad glfw glm assimp freetype)
