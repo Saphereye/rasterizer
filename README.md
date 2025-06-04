@@ -1,4 +1,4 @@
 # Rasterizer
 A WIP rasterizer made using opengl and C++
 
-![](./assets/demo.png)
+![](./assets/demo.mp4)
